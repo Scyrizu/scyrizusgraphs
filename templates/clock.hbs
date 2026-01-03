@@ -1,0 +1,98 @@
+<!--
+ Copyright 2026
+
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<div class="custom-system-form-field">
+  <label for="clockLabel">{{localize "CSB.ComponentProperties.InputComponent.Label"}}</label>
+  <input id="clockLabel" type="text" data-key="label" value="{{label}}" />
+</div>
+
+<div class="custom-system-form-field">
+  <label for="clockSize">{{localize "CSB.ComponentProperties.Size.SectionTitle"}}*</label>
+  <select id="clockSize" data-key="size">
+    {{selectOptions COMPONENT_SIZES selected=size localize=true}}
+  </select>
+</div>
+
+<div class="custom-system-size-custom" style="{{#unless (eq size "custom")}}display:none{{/unless}}">
+  <div class="custom-system-form-field">
+    <label for="clockCustomSize">{{localize "CSB.ComponentProperties.Size.CustomSizeTitle"}}*</label>
+    <input id="clockCustomSize" data-key="customSize" type="number" value="{{customSize}}" />
+  </div>
+</div>
+
+<hr />
+
+<div class="custom-system-form-field">
+  <label for="clockSegmentsInput">{{localize "SCG.ComponentProperties.Clock.Segments"}}*
+        {{> icon-formula}}
+  </label>
+  <input
+    id="clockSegmentsInput"
+    type="text"
+    data-key="clockSegmentsExpr"
+    value="{{clockSegmentsExpr}}"
+    placeholder="2-12"
+  />
+</div>
+
+<div class="custom-system-form-field">
+  <label for="defaultFilledInput">{{localize "SCG.ComponentProperties.Clock.DefaultFilled"}}
+        {{> icon-formula}}
+        {{> icon-info title=(localize "CSB.ComponentProperties.AllowFormulaCreateTimeOnly")}}
+  </label>
+  <input
+    id="defaultFilledInput"
+    type="text"
+    data-key="defaultFilledExpr"
+    value="{{defaultFilledExpr}}"
+    placeholder="0"
+  />
+</div>
+
+<hr />
+
+<div class="custom-system-form-field">
+  <label for="clockColor">{{localize "SCG.ComponentProperties.Clock.Color"}}</label>
+  <select id="clockColor" data-key="clockColor">
+    {{selectOptions COLOR_SELECTION selected=clockColor localize=true}}
+  </select>
+</div>
+
+<div class="scg-color-custom" style="{{#unless (eq clockColor "custom")}}display:none{{/unless}}">
+  <div class="custom-system-form-field">
+    <label for="clockCustomColor">{{localize "SCG.ComponentProperties.Clock.CustomSegmentColor"}}
+      {{> icon-formula}}
+    </label>
+    <input
+      id="clockCustomColor"
+      type="text"
+      data-key="clockCustomColor"
+      value="{{clockCustomColor}}"
+      placeholder="r,g,b,a"
+    />
+  </div>
+</div>
+
+<div class="custom-system-form-field">
+  <label for="clockBackgroundColor">{{localize "SCG.ComponentProperties.Clock.BackgroundColor"}}
+      {{> icon-formula}}
+  </label>
+  <input
+    id="clockBackgroundColor"
+    type="text"
+    data-key="clockBackgroundColor"
+    value="{{clockBackgroundColor}}"
+    placeholder="r,g,b,a"
+  />
+</div>
+
+<hr />
+
+<div class="custom-system-form-field">
+  <label for="clockDisableInteraction">{{localize "SCG.ComponentProperties.Clock.DisableInteraction"}}</label>
+  <input id="clockDisableInteraction" type="checkbox" {{#if disableInteraction}}checked{{/if}} />
+</div>

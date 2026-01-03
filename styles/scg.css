@@ -1,0 +1,19 @@
+/*
+ * Copyright 2026
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+.scg-fill-white { fill: rgba(245, 245, 245, 1); }
+.scg-fill-black { fill: rgba(27, 27, 27, 1); }
+.scg-fill-gray  { fill: rgba(112, 128, 144, 1); }
+.scg-fill-red   { fill: rgba(205, 92, 92, 1); }
+.scg-fill-gold  { fill: rgba(218, 165, 32, 1); }
+.scg-fill-green { fill: rgba(46, 139, 87, 1); }
+.scg-fill-blue  { fill: rgba(30, 144, 255, 1); }
+
+.SCG-Clock svg,
+.SCG-Clock path {
+  outline: none;
+}

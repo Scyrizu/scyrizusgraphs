@@ -1,0 +1,40 @@
+{
+  "id": "ScyrizusGraphs",
+  "title": "Scyrizu's Graphs",
+  "description": "Facilitates making a variety of graphs and charts within Custom System Builder.",
+  "authors": [
+    {
+    "name": "Scyrizu"
+    }
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "esmodules": [
+    "./scripts/main.js"
+  ],
+  "styles": [
+    "./styles/scg.css"
+  ],
+  "templates": [
+    "./templates/graphs.html"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "custom-system-builder",
+        "type": "system",
+        "manifest": "https://gitlab.com/custom-system-builder/custom-system-builder/-/releases/4.6.7/downloads/system.json"
+      }
+    ]
+  }
+}

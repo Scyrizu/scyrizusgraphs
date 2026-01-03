@@ -1,0 +1,48 @@
+
+{
+  "SCG": {
+    "ComponentProperties": {
+      "Color": {
+        "White": "White",
+        "Black": "Black",
+        "Gray": "Gray",
+        "Red": "Red",
+        "Gold": "Gold",
+        "Green": "Green",
+        "Blue": "Blue",
+        "Custom": "Custom"
+      },
+      "Clock": {
+        "Color": "Color",
+        "Segments": "Segments",
+        "DefaultFilled": "Default filled",
+        "BackgroundColor": "Background color",
+        "CustomSegmentColor": "Custom segment color",
+        "DisableInteraction": "Disable click + context menu"
+      }
+    },
+    "ContextMenu": {
+      "ClearAll": "Clear all"
+    },
+    "Clock": {
+      "Errors": {
+        "SegmentFormulaNaN": "Segment NaN, Fallback: 4",
+        "SegmentFormulaOutOfRange": "Segment Out Of Range (2-12)",
+        "SegmentColorFormulaInvalid": "Improper Color, Fallback: 0,0,0",
+        "BackgroundColorFormulaInvalid": "Improper BgColor, Fallback: 0,0,0"
+      },
+      "Config": {
+        "Errors": {
+          "CustomSizeInvalid": "Custom size must be a positive number.",
+          "SegmentsNaN": "Segments must be a number (2–12) or a CSB formula.",
+          "SegmentsOutOfRange": "Segments must be between 2 and 12.",
+          "DefaultFilledNaN": "Default filled must be a number (0+) or a CSB formula.",
+          "DefaultFilledNegative": "Default filled cannot be negative.",
+          "DefaultFilledTooHigh": "Default filled cannot be greater than segments.",
+          "CustomColorInvalid": "Custom segment color must be r,g,b,a",
+          "BackgroundColorInvalid": "Background color must be r,g,b,a."
+        }
+      }
+    }
+  }
+}
