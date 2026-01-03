@@ -18,9 +18,6 @@
   "styles": [
     "./styles/scg.css"
   ],
-  "templates": [
-    "./templates/graphs.html"
-  ],
   "languages": [
     {
       "lang": "en",
