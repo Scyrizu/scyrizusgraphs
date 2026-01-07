@@ -1,7 +1,7 @@
 # scyrizusgraphs
 A module that extends custom system builder to create new visual and ui elements.
 
-<a href='https://ko-fi.com/C1C01RTGAQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/scyrizu' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 Current Components:
 - Progression Clocks
