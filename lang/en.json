@@ -1,6 +1,9 @@
-
 {
   "SCG": {
+    "DisplaySettings": {
+      "PictureHeader": "SCG Picture",
+      "UsePictureLabel": "Use SCG Picture?"
+    },
     "ComponentProperties": {
       "Color": {
         "White": "White",
@@ -13,12 +16,18 @@
         "Custom": "Custom"
       },
       "Clock": {
-        "Color": "Color",
         "Segments": "Segments",
         "DefaultFilled": "Default filled",
         "BackgroundColor": "Background color",
         "CustomSegmentColor": "Custom segment color",
-        "DisableInteraction": "Disable click + context menu"
+        "DisableInteraction": "Disable interaction",
+        "StrokeColor": "Outline color",
+        "CustomStrokeColor": "Custom outline color",
+        "SegmentColor": "Segment color",
+        "SectionShape": "Shape",
+        "SectionColors": "Colors",
+        "CustomBackgroundColor": "Custom background color",
+        "SectionBehavior": "Behavior"
       }
     },
     "ContextMenu": {
@@ -27,20 +36,22 @@
     "Clock": {
       "Errors": {
         "SegmentFormulaNaN": "Segment NaN, Fallback: 4",
-        "SegmentFormulaOutOfRange": "Segment Out Of Range (2-12)",
+        "SegmentFormulaOutOfRange": "Segment Out Of Range (1-20)",
         "SegmentColorFormulaInvalid": "Improper Color, Fallback: 0,0,0",
-        "BackgroundColorFormulaInvalid": "Improper BgColor, Fallback: 0,0,0"
+        "BackgroundColorFormulaInvalid": "Improper BgColor, Fallback: 0,0,0",
+        "StrokeColorFormulaInvalid": "Improper outline color, Fallback: black"
       },
       "Config": {
         "Errors": {
           "CustomSizeInvalid": "Custom size must be a positive number.",
-          "SegmentsNaN": "Segments must be a number (2–12) or a CSB formula.",
-          "SegmentsOutOfRange": "Segments must be between 2 and 12.",
+          "SegmentsNaN": "Segments must be a number (1\u201320) or a CSB formula.",
+          "SegmentsOutOfRange": "Segments must be between 1 and 20.",
           "DefaultFilledNaN": "Default filled must be a number (0+) or a CSB formula.",
           "DefaultFilledNegative": "Default filled cannot be negative.",
           "DefaultFilledTooHigh": "Default filled cannot be greater than segments.",
           "CustomColorInvalid": "Custom segment color must be r,g,b,a",
-          "BackgroundColorInvalid": "Background color must be r,g,b,a."
+          "BackgroundColorInvalid": "Background color must be r,g,b,a.",
+          "CustomStrokeColorInvalid": "Custom outline color must be r,g,b,a."
         }
       }
     }

@@ -5,9 +5,11 @@
  License, v. 2.0. If a copy of the MPL was not distributed with this
  file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
+
+{{!-- General --}}
 <div class="custom-system-form-field">
   <label for="clockLabel">{{localize "CSB.ComponentProperties.InputComponent.Label"}}</label>
-  <input id="clockLabel" type="text" data-key="label" value="{{label}}" />
+  <input id="clockLabel" type="text" data-key="label" name="label" value="{{label}}" />
 </div>
 
 <div class="custom-system-form-field">
@@ -17,82 +19,95 @@
   </select>
 </div>
 
-<div class="custom-system-size-custom" style="{{#unless (eq size "custom")}}display:none{{/unless}}">
+<div class="custom-system-size-custom" style="{{#unless (eq size 'custom')}}display:none{{/unless}}">
   <div class="custom-system-form-field">
     <label for="clockCustomSize">{{localize "CSB.ComponentProperties.Size.CustomSizeTitle"}}*</label>
-    <input id="clockCustomSize" data-key="customSize" type="number" value="{{customSize}}" />
+    <input id="clockCustomSize" data-key="customSize" type="number" name="customSize" value="{{customSize}}" />
   </div>
 </div>
 
 <hr />
 
+{{!-- Clock Shape --}}
+<p class="scg-section-label">{{localize "SCG.ComponentProperties.Clock.SectionShape"}}</p>
+
 <div class="custom-system-form-field">
-  <label for="clockSegmentsInput">{{localize "SCG.ComponentProperties.Clock.Segments"}}*
-        {{> icon-formula}}
+  <label for="clockSegmentsInput">{{localize "SCG.ComponentProperties.Clock.Segments"}}
+    {{> icon-formula}}
   </label>
-  <input
-    id="clockSegmentsInput"
-    type="text"
-    data-key="clockSegmentsExpr"
-    value="{{clockSegmentsExpr}}"
-    placeholder="2-12"
-  />
+  <input id="clockSegmentsInput" type="text" data-key="clockSegmentsExpr" name="clockSegmentsExpr" value="{{clockSegmentsExpr}}" placeholder="1-20" />
 </div>
 
 <div class="custom-system-form-field">
   <label for="defaultFilledInput">{{localize "SCG.ComponentProperties.Clock.DefaultFilled"}}
-        {{> icon-formula}}
-        {{> icon-info title=(localize "CSB.ComponentProperties.AllowFormulaCreateTimeOnly")}}
+    {{> icon-formula}}
+    {{> icon-info title=(localize "CSB.ComponentProperties.AllowFormulaCreateTimeOnly")}}
   </label>
-  <input
-    id="defaultFilledInput"
-    type="text"
-    data-key="defaultFilledExpr"
-    value="{{defaultFilledExpr}}"
-    placeholder="0"
-  />
+  <input id="defaultFilledInput" type="text" data-key="defaultFilledExpr" name="defaultFilledExpr" value="{{defaultFilledExpr}}" placeholder="0" />
 </div>
 
 <hr />
 
+{{!-- Colors --}}
+<p class="scg-section-label">{{localize "SCG.ComponentProperties.Clock.SectionColors"}}</p>
+
+{{!-- Segment fill color --}}
 <div class="custom-system-form-field">
-  <label for="clockColor">{{localize "SCG.ComponentProperties.Clock.Color"}}</label>
+  <label for="clockColor">{{localize "SCG.ComponentProperties.Clock.SegmentColor"}}</label>
   <select id="clockColor" data-key="clockColor">
     {{selectOptions COLOR_SELECTION selected=clockColor localize=true}}
   </select>
 </div>
 
-<div class="scg-color-custom" style="{{#unless (eq clockColor "custom")}}display:none{{/unless}}">
+<div class="scg-color-custom" style="{{#unless (eq clockColor 'custom')}}display:none{{/unless}}">
   <div class="custom-system-form-field">
     <label for="clockCustomColor">{{localize "SCG.ComponentProperties.Clock.CustomSegmentColor"}}
       {{> icon-formula}}
     </label>
-    <input
-      id="clockCustomColor"
-      type="text"
-      data-key="clockCustomColor"
-      value="{{clockCustomColor}}"
-      placeholder="r,g,b,a"
-    />
+    <input id="clockCustomColor" type="text" data-key="clockCustomColor" name="clockCustomColor" value="{{clockCustomColor}}" placeholder="r,g,b,a" />
   </div>
 </div>
 
+{{!-- Outline (stroke) color --}}
 <div class="custom-system-form-field">
-  <label for="clockBackgroundColor">{{localize "SCG.ComponentProperties.Clock.BackgroundColor"}}
+  <label for="clockStrokeColor">{{localize "SCG.ComponentProperties.Clock.StrokeColor"}}</label>
+  <select id="clockStrokeColor" data-key="clockStrokeColor">
+    {{selectOptions COLOR_SELECTION selected=clockStrokeColor localize=true}}
+  </select>
+</div>
+
+<div class="scg-stroke-color-custom" style="{{#unless (eq clockStrokeColor 'custom')}}display:none{{/unless}}">
+  <div class="custom-system-form-field">
+    <label for="clockCustomStrokeColor">{{localize "SCG.ComponentProperties.Clock.CustomStrokeColor"}}
       {{> icon-formula}}
-  </label>
-  <input
-    id="clockBackgroundColor"
-    type="text"
-    data-key="clockBackgroundColor"
-    value="{{clockBackgroundColor}}"
-    placeholder="r,g,b,a"
-  />
+    </label>
+    <input id="clockCustomStrokeColor" type="text" data-key="clockCustomStrokeColor" name="clockCustomStrokeColor" value="{{clockCustomStrokeColor}}" placeholder="r,g,b,a" />
+  </div>
+</div>
+
+{{!-- Background color --}}
+<div class="custom-system-form-field">
+  <label for="clockBackgroundColorPreset">{{localize "SCG.ComponentProperties.Clock.BackgroundColor"}}</label>
+  <select id="clockBackgroundColorPreset" data-key="clockBackgroundColorPreset">
+    {{selectOptions COLOR_SELECTION selected=clockBackgroundColorPreset localize=true}}
+  </select>
+</div>
+
+<div class="scg-bg-color-custom" style="{{#unless (eq clockBackgroundColorPreset 'custom')}}display:none{{/unless}}">
+  <div class="custom-system-form-field">
+    <label for="clockBackgroundColor">{{localize "SCG.ComponentProperties.Clock.CustomBackgroundColor"}}
+      {{> icon-formula}}
+    </label>
+    <input id="clockBackgroundColor" type="text" data-key="clockBackgroundColor" name="clockBackgroundColor" value="{{clockBackgroundColor}}" placeholder="r,g,b,a" />
+  </div>
 </div>
 
 <hr />
 
+{{!-- Behavior --}}
+<p class="scg-section-label">{{localize "SCG.ComponentProperties.Clock.SectionBehavior"}}</p>
+
 <div class="custom-system-form-field">
   <label for="clockDisableInteraction">{{localize "SCG.ComponentProperties.Clock.DisableInteraction"}}</label>
-  <input id="clockDisableInteraction" type="checkbox" {{#if disableInteraction}}checked{{/if}} />
+  <input id="clockDisableInteraction" name="clockDisableInteraction" type="checkbox" {{#if disableInteraction}}checked{{/if}} />
 </div>
