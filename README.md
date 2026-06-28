@@ -14,3 +14,8 @@ Current Components:
 <img width="654" height="443" alt="settinglocation" src="https://github.com/user-attachments/assets/ea56ab13-2d25-48e1-a783-5498592361b1" />
 <img width="315" height="318" alt="Screenshot 2026-05-21 000813" src="https://github.com/user-attachments/assets/cea4587b-8687-4539-93e5-6fa0cf9fdd8a" />
 </details>
+<detials>
+  <summary>MultiRow Dynamic Tables</summary>
+  <img width="774" height="784" alt="image" src="https://github.com/user-attachments/assets/753e76bd-d038-4ba5-a9ee-c4b95c757dcc" />
+  <img width="776" height="781" alt="image" src="https://github.com/user-attachments/assets/9e46f104-68e7-4710-b8f5-88ca3d007f58" />
+</detials>
